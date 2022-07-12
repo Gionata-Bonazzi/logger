@@ -1,0 +1,22 @@
+{
+    "name": "up3up/logger",
+    "description": "Libreria di Logging che fa uso di monolog, e fornisce un handler per fare log su un database tramite PDO.",
+    "authors": [
+        {
+            "name": "Gionata Bonazzi",
+            "email": "gionata.bonazzi@up3up.it"
+        }
+    ],
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "require": {
+        "monolog/monolog": "^2.7",
+        "phpmailer/phpmailer": "^6.6"
+    },
+    "autoload": {
+        "psr-4": {"Up3Up\\Logger\\": ["src/Logger"]}
+    }
+}
