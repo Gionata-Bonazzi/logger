@@ -1,9 +1,7 @@
 <?php
 namespace Up3Up\Logger;
 
-use DateTime;
 use InvalidArgumentException;
-use Monolog\Handler\NativeMailerHandler;
 use Monolog\Handler\StreamHandler;
 use PDO;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -61,7 +59,7 @@ class Logger {
     }
 
     /**
-     * Restituisce un oggetto monolog, invece di avere l'oggetto AppLogger.
+     * Restituisce un oggetto monolog\Logger, invece di avere l'oggetto Up3Up\Logger.
      */
     public static function get_logger($channel, $level, $file_log=null, $db=null, $emailer=null) {
         $logger = new Logger($channel, $level, $file_log, $db, $emailer);

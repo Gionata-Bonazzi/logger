@@ -5,6 +5,12 @@ use Monolog\Logger;
 use Monolog\Handler\AbstractProcessingHandler;
 use PHPMailer\PHPMailer\PHPMailer;
 
+/**
+ * Invia una email usando PHPMailer.
+ * Invia informazioni base, ma se site_url viene messo nel contesto viene inserito sia nell'oggetto, sia nel corpo dell'email.
+ * Questo è utile se l'indirizzo email del mittente, o del destinatario, sono usati per più progetti che hanno dei log.
+ * Comunque di base il nome del canale dovrebbe bastare per identificare il log.
+ */
 class PHPMailerHandler extends AbstractProcessingHandler
 {
     private $mailer;
